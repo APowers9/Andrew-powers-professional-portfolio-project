@@ -1,10 +1,16 @@
+:root {
+    --light: #f1ab86;
+    --medium: #c57b57;
+    --dark: #5d9a9e;
+}
+
 *, html {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #ddd;
+    background-color: var(--light);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,8 +19,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #333; 
-    color: #ddd;    
+    background-color: var(--dark); 
+    color: var(--light);    
+}
+
+main {
+    max-width: 796px;
+    margin: auto;
 }
 
 nav {
@@ -23,7 +34,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--light);
     margin-left: 8px;
 }
 
@@ -34,12 +45,13 @@ section {
 }
 
 article {
-    width: 50%;
+    width: calc(50% - 16px);
     margin-bottom: 12px;
+    padding: 8px;
 }
 
-article first of type {
-
+article:first-of-type {
+    width: 100% ;
 }
 
 h2 {
@@ -53,6 +65,7 @@ img {
 
 #about-me {
     text-align: center;
+    align-items: center;
 }
 
 #about-me img {
@@ -61,6 +74,12 @@ img {
 
 #work img {
     width: 100%;
+}
+
+#work div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #contact div {
@@ -72,5 +91,12 @@ img {
     header  {
         flex-direction: column;
     }
-    margin 4px;
+   nav a {
+    margin-left: 0;
+   }
+
+   article {
+    width: 100%;
+   }
+
 }
